@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
 
-  "name": "Automify",
+  "name": "Pineapple House Express",
   "version": "0.1.0",
-  "description": "What percentage of a job you're applying to automate-able?",
-  "icons": {  "16":"images/smart.png",
-              "48":"images/smart.png",
-              "128":"images/smart.png" },
+  "description": "A simple chrome extension to determine what house purchaser profile you are?  Are you a Patrick Starfish, SpongeBob Square Pants or Squiddward Tentacles?",
+  "icons": {  "16":"images/House.png",
+              "48":"images/House.png",
+              "128":"images/House.png" },
   "content_scripts": [{
     "css": ["tipped.css", "styles.css"],
     "js": ["jquery-3.1.1.min.js", "tipped.js", "data.js", "content.js"],
