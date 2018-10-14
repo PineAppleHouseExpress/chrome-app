@@ -3,7 +3,7 @@
 
   "name": "Pineapple House Express",
   "version": "0.1.0",
-  "description": "A simple chrome extension to determine what house purchaser profile you are?  Are you a Patrick Starfish, SpongeBob Square Pants or Squiddward Tentacles?",
+  "description": "A simple web extension to Profile Home buyers in three categories?",
   "icons": {  "16":"images/House.png",
               "48":"images/House.png",
               "128":"images/House.png" },

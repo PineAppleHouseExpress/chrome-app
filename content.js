@@ -1,25 +1,26 @@
-var titles = document.getElementsByClassName('jobtitle');
+var price = document.getElementsByClassName('m_map_map_prpty_info_price');
 
-// SHOW SKILL PERCENTAGES
+// Show the probability of the Profile to be likely related to the type of house
 var showSkillSusceptibility = true;
 
-for (var i = 0, l = titles.length; i < l; i++) {
+for (var i = 0, l = price.length; i < l; i++) {
 
-	// Match closest job type to posting
-	var jobType = jobTypes['Default'];
+	// Match closest Profile type to value 
+	var ProfileType = ProfileTypes['Default'];
 	title = titles[i].innerText;
-	for(job in jobTypes){
-		var re = new RegExp(job); // use regex to make more generalizable
+	for(profile in ProfileTypes){
+		var re = new RegExp(profile); // use regex to make more generalizable
 		if(re.test(title) == true){
-			jobType = jobTypes[job];
+			ProfileType = ProfileTypes[profile];
 		}
 	}
 
-	// Get data from jobType
-	var prob = jobType.percent; // susceptibility of job type
-	var mostSuscept = jobType.mostSuscept; // skills most susceptible to automation
-	var leastSuscept = jobType.leastSuscept; // skills least susceptible to automation
+	// Get data from ProfileType
+	var prob = ProfileType.percent; // The probability of feeling of reason
+	var pro = ProfileType.Pros; // skills most susceptible to automation
+	var con = ProfileType.Cons; // skills least susceptible to automation
 
+	// This is where the code will inject the autoamtion probaility into the website. 
 	// Create div element for automation line and inject into right spot
 	var div = document.createElement("div");
 	sponsor = titles[i].classList.contains("turnstileLink");
@@ -43,9 +44,9 @@ for (var i = 0, l = titles.length; i < l; i++) {
 	// Create content for Tipper popup
 	var content = "<p style='color:" + color + "; font-weight:bold;'>This job is " + prob + "% automatable.</p>";
 
-	// Create table listing most and least susceptible skills
-	content += "<p>These are the skills most susceptible to automation:</p>";
-	content += "<table class='susceptible-skills-table'><tbody>";
+	// Create table listing valuation, pros, cons, and percent for reasons.
+	content += "<p>TThis house seems like a house for :</p>";
+	content += "<table class='Sponge-table'><tbody>";
 	content += "<tr class='header'><th>Most Susceptible</th><th>Least Susceptible</th></tr>";
 	content += "<tr class='body'><td><ul>";
 	for (var j = 0; j < mostSuscept.length; j++) {
